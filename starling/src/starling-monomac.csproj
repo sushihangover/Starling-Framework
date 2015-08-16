@@ -3,12 +3,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3B3DD626-A7FA-430E-85FB-C4E553900934}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>starling</RootNamespace>
     <AssemblyName>starling</AssemblyName>
+    <UseMSBuildEngine>False</UseMSBuildEngine>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -101,13 +103,13 @@
     <None Include="starling\utils\transformCoords.as" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\playscript-mono\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic_aot-net_4_0.csproj">
+    <ProjectReference Include="..\..\..\playscript\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic_aot-net_4_5.csproj">
       <Project>{0BACBE20-34DD-4E24-8B91-87970E8A23B9}</Project>
-      <Name>PlayScript.Dynamic_aot-net_4_0</Name>
+      <Name>PlayScript.Dynamic_aot-net_4_5</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\playscript-mono\mcs\class\pscorlib_aot\pscorlib_aot-net_4_0_monomac.csproj">
+    <ProjectReference Include="..\..\..\playscript\mcs\class\pscorlib_aot\pscorlib_aot-net_4_5_monomac.csproj">
       <Project>{EDBAC91B-2817-479E-8DDF-B24ADDA563A6}</Project>
-      <Name>pscorlib_aot-net_4_0_monomac</Name>
+      <Name>pscorlib_aot-net_4_5_monomac</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

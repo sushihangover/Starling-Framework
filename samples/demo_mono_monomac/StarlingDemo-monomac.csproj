@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}</ProjectGuid>
     <ProjectTypeGuids>{948B3504-5B70-4649-8FE4-BDE1FB46EC69};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -27,6 +27,7 @@
     <EnablePackageSigning>False</EnablePackageSigning>
     <IncludeMonoRuntime>False</IncludeMonoRuntime>
     <UseSGen>False</UseSGen>
+    <UseRefCounting>false</UseRefCounting>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -41,6 +42,7 @@
     <EnablePackageSigning>False</EnablePackageSigning>
     <IncludeMonoRuntime>False</IncludeMonoRuntime>
     <UseSGen>False</UseSGen>
+    <UseRefCounting>false</UseRefCounting>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -129,17 +131,17 @@
       <Project>{3B3DD626-A7FA-430E-85FB-C4E553900934}</Project>
       <Name>starling-monomac</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\playscript-mono\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic_aot-net_4_0.csproj">
-      <Project>{0BACBE20-34DD-4E24-8B91-87970E8A23B9}</Project>
-      <Name>PlayScript.Dynamic_aot-net_4_0</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\playscript-mono\mcs\class\pscorlib_aot\pscorlib_aot-net_4_0_monomac.csproj">
-      <Project>{EDBAC91B-2817-479E-8DDF-B24ADDA563A6}</Project>
-      <Name>pscorlib_aot-net_4_0_monomac</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\playscript-base\PlayScript.Application.OSX\PlayScript.Application.OSX.csproj">
       <Project>{3829D8CC-3505-48B2-B5A9-18CD9DCCA192}</Project>
       <Name>PlayScript.Application.OSX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\playscript\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic_aot-net_4_5.csproj">
+      <Project>{0BACBE20-34DD-4E24-8B91-87970E8A23B9}</Project>
+      <Name>PlayScript.Dynamic_aot-net_4_5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\playscript\mcs\class\pscorlib_aot\pscorlib_aot-net_4_5_monomac.csproj">
+      <Project>{EDBAC91B-2817-479E-8DDF-B24ADDA563A6}</Project>
+      <Name>pscorlib_aot-net_4_5_monomac</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
