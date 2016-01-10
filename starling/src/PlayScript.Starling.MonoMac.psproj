@@ -94,10 +94,15 @@
     <Compile Include="starling\utils\AssetManager.as" />
     <Compile Include="starling\text\MiniBitmapFont.as" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="starling\extensions\ColorArgb.as" />
+    <Compile Include="starling\extensions\Particle.as" />
+    <Compile Include="starling\extensions\PDParticle.as" />
   </ItemGroup>
   <ItemGroup>
     <None Include="starling\utils\transformCoords.as" />
     <None Include="packages.config" />
+    <None Include="starling\extensions\ParticleSystem.as" />
+    <None Include="starling\extensions\PDParticleSystem.as" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\playscript\mcs\class\pscorlib_aot\pscorlib.AOT.MonoMac.psproj">
