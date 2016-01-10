@@ -1,14 +1,13 @@
 package {
 
 	import playscript.Application;
-
+	
 	class MainClass
 	{
 		public static function Main (args:String[]):void
 		{
-			Application.run (args, Demo_Mobile);
-			//Application.run (args, Tutorial1 );
-			// Application.run (args, MyStarlingTest);
+			Application.run ( args, Tutorial1 );
+			Application.run ( args, MyStarlingTest );
 		}
 	}
 }

@@ -3,13 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3B3DD626-A7FA-430E-85FB-C4E553900934}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>starling</RootNamespace>
-    <AssemblyName>starling</AssemblyName>
-    <UseMSBuildEngine>False</UseMSBuildEngine>
+    <AssemblyName>PlayScript.Starling.MonoMac</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -35,7 +32,6 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfo.cs" />
     <Compile Include="com\adobe\utils\PerspectiveMatrix3D.as" />
     <Compile Include="starling\errors\AbstractClassError.as" />
     <Compile Include="starling\errors\AbstractMethodError.as" />
@@ -97,19 +93,25 @@
     <Compile Include="starling\utils\formatString.as" />
     <Compile Include="starling\utils\AssetManager.as" />
     <Compile Include="starling\text\MiniBitmapFont.as" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="starling\utils\transformCoords.as" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\playscript\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic_aot-net_4_5.csproj">
-      <Project>{0BACBE20-34DD-4E24-8B91-87970E8A23B9}</Project>
-      <Name>PlayScript.Dynamic_aot-net_4_5</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\playscript\mcs\class\pscorlib_aot\pscorlib_aot-net_4_5_monomac.csproj">
+    <ProjectReference Include="..\..\..\playscript\mcs\class\pscorlib_aot\pscorlib.AOT.MonoMac.psproj">
       <Project>{EDBAC91B-2817-479E-8DDF-B24ADDA563A6}</Project>
-      <Name>pscorlib_aot-net_4_5_monomac</Name>
+      <Name>pscorlib.AOT.MonoMac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\playscript\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic.AOT.csproj">
+      <Project>{0BACBE20-34DD-4E24-8B91-87970E8A23B9}</Project>
+      <Name>PlayScript.Dynamic.AOT</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <!--    <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />-->
+  <Import Project="..\..\..\packages\PlayScript.MSBuild.5.10.2.4\build\PlayScript.MSBuild.Targets" Condition="Exists('..\..\..\packages\PlayScript.MSBuild.5.10.2.4\build\PlayScript.MSBuild.Targets')" />
 </Project>

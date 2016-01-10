@@ -7,8 +7,6 @@ package {
 		public static function Main (args:String[]):void
 		{
 			Application.run ( args, Demo_Mobile );
-//			Application.run ( args, _root.Tutorial1 );
-//			Application.run ( args, _root.MyStarlingTest );
 		}
 	}
 }
