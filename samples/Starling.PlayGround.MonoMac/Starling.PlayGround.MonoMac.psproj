@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{948B3504-5B70-4649-8FE4-BDE1FB46EC69};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC};{464403D2-EB41-442A-A1F1-9BF858B8865F}</ProjectTypeGuids>
+    <ProjectGuid>{45B828B4-E5F7-484E-B5F2-22D0ED0A9B3C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>StarlingDemo</RootNamespace>
+    <AssemblyName>StarlingDemo</AssemblyName>
+    <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
+    <SuppressXamMacMigration>True</SuppressXamMacMigration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <EnableCodeSigning>False</EnableCodeSigning>
+    <CreatePackage>False</CreatePackage>
+    <EnablePackageSigning>False</EnablePackageSigning>
+    <IncludeMonoRuntime>False</IncludeMonoRuntime>
+    <UseSGen>False</UseSGen>
+    <UseRefCounting>false</UseRefCounting>
+    <Profiling>false</Profiling>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <EnableCodeSigning>False</EnableCodeSigning>
+    <CreatePackage>False</CreatePackage>
+    <EnablePackageSigning>False</EnablePackageSigning>
+    <IncludeMonoRuntime>False</IncludeMonoRuntime>
+    <UseSGen>False</UseSGen>
+    <UseRefCounting>false</UseRefCounting>
+    <Profiling>false</Profiling>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="MonoMac" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyStarlingTest.play" />
+    <Compile Include="Tutorial1.play" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="..\..\..\packages\PlayScript.MSBuild.5.10.2.4\build\PlayScript.Mac.MSBuild.Targets" Condition="Exists('..\..\..\packages\PlayScript.MSBuild.5.10.2.4\build\PlayScript.Mac.MSBuild.Targets')" />
+  <ItemGroup>
+    <BundleResource Include="DemoTexture256.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\starling\src\PlayScript.Starling.MonoMac.psproj">
+      <Project>{3B3DD626-A7FA-430E-85FB-C4E553900934}</Project>
+      <Name>PlayScript.Starling.MonoMac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\playscript\mcs\class\pscorlib_aot\pscorlib.AOT.MonoMac.psproj">
+      <Project>{EDBAC91B-2817-479E-8DDF-B24ADDA563A6}</Project>
+      <Name>pscorlib.AOT.MonoMac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\playscript\mcs\class\PlayScript.Dynamic_aot\PlayScript.Dynamic.AOT.csproj">
+      <Project>{0BACBE20-34DD-4E24-8B91-87970E8A23B9}</Project>
+      <Name>PlayScript.Dynamic.AOT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\PlayScript.HostApp\PlayScript.Application.MonoMac\PlayScript.Application.MonoMac.csproj">
+      <Project>{3829D8CC-3505-48B2-B5A9-18CD9DCCA192}</Project>
+      <Name>PlayScript.Application.MonoMac</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
